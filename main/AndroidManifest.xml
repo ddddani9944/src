@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.kftc.bfop.useorgsampleapp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <application
+        android:name="com.kftc.bfop.useorgsampleapp.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="result"
+                    android:scheme="bfoptest"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.TokenRequestViewAppActivity"/>
+        <activity android:name=".activity.SettingActivity"/>
+        <activity android:name=".activity.WebAuthorizeAccountActivity"/>
+        <activity android:name=".activity.WebLoginAgreeActivity"/>
+        <activity android:name=".activity.WebRegisterAccountActivity"/>
+        <activity android:name=".activity.TokenRequestSenderActivity"/>
+        <activity android:name=".activity.TokenRequestViewWebActivity"/>
+
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for App Indexing.
+             See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+</manifest>
